@@ -1,0 +1,27 @@
+[project]
+name = "poweragen"
+version = "0.1.0"
+description = "Template-aware PPTX generation agent MVP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.110",
+  "lxml>=6.1",
+  "pillow>=12.2",
+  "pydantic>=2.13",
+  "python-pptx>=1.0.2",
+  "rich>=15.0",
+  "typer>=0.25",
+  "uvicorn>=0.47",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0",
+]
+
+[project.scripts]
+poweragen = "poweragen.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
